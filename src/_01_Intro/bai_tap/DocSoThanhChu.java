@@ -3,31 +3,104 @@ package _01_Intro.bai_tap;
 import java.util.Scanner;
 
 public class DocSoThanhChu {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Số cần đọc là: ");
-        int number = scanner.nextInt();
-//        String  hangChuc2=" twenty",
-//                hangChuc3=   " thirty",
-//                hangChuc4=  " forty",
-//                hangChuc5=   " fifty",
-//                hangChuc6=  " sixty",
-//                hangChuc7= " seventy",
-//                hangChuc8=   " eighty",
-//                hangChuc9 = " ninety";
-        double hangTram = Math.floor(number / 100);
-        double hangChuc = Math.floor((number%100)/10);
-        double hangDonVi = Math.floor(number % 10);
-        switch (hangChuc) {
+        double number = scanner.nextDouble();
+        String hangChucChu,hangTramChu,hangDVChu;
+
+        int hangTram = Math.floor(number/100);
+        int hangChuc = Math.floor((number%100)/10);
+        int hangDonVi = number % 10;
+
+        switch (hangDonVi) {
+            case 1:
+                 hangDVChu= " one ";
+                break;
             case 2:
-                String hangChucChu= " twenty";
+                 hangDVChu= " two ";
                 break;
             case 3:
-                String hangChucChu= " twenty";
+                 hangDVChu= " three" ;
                 break;
             case 4:
-                String hangChucChu= " twenty";
+                 hangDVChu= " four ";
                 break;
+            case 5:
+                 hangDVChu= "five ";
+                break;
+            case 6:
+                 hangDVChu= " six ";
+                break;
+            case 7:
+                 hangDVChu= " seven ";
+                break;
+            case 8:
+                 hangDVChu= " eigh ";
+                break;
+            case 9:
+                 hangDVChu= " nine ";
+                break;
+        }
+        switch (hangChuc) {
+            case 1:
+                 hangChucChu= " tenty";
+                break;
+            case 2:
+                 hangChucChu= " twenty";
+                break;
+            case 3:
+                 hangChucChu= " thirty";
+                break;
+            case 4:
+                hangChucChu= " forty";
+                break;
+            case 5:
+                 hangChucChu= " fifty";
+                break;
+            case 6:
+                 hangChucChu= " sixty";
+                break;
+            case 7:
+               hangChucChu= " seventy";
+                break;
+            case 8:
+                 hangChucChu= " eighty";
+                break;
+            case 9:
+                hangChucChu= " ninety";
+                break;
+        }
+        switch (hangTram) {
+            case 1:
+                 hangTramChu= " one hundred";
+                break;
+            case 2:
+                 hangTramChu= " two hundred";
+                break;
+            case 3:
+                 hangTramChu= " three hundred";
+                break;
+            case 4:
+                 hangTramChu= " four hundred";
+                break;
+            case 5:
+                 hangTramChu= "five hundred";
+                break;
+            case 6:
+                 hangTramChu= " six hundred";
+                break;
+            case 7:
+                 hangTramChu= " seven hundred";
+                break;
+            case 8:
+                 hangTramChu= " eigh hundred";
+                break;
+            case 9:
+                 hangTramChu= " nine hundred";
+                break;
+
         }
         String text="";
         if (number < 10 && number >= 0) {
@@ -102,7 +175,9 @@ public class DocSoThanhChu {
 
             }
         } else if (number >= 20 && number < 100) {
-            text+=
+            System.out.println(hangChucChu+hangDVChu);
+        }else if (number >= 100 && number < 1000) {
+            System.out.println(hangTramChu+hangChucChu+"and"+hangDVChu);
         }
     }
 }
