@@ -2,7 +2,7 @@ package _03_Array_Method.bai_tap;
 
 import java.util.Scanner;
 
-public class SumX {
+public class SumDiagonal {
     public static void main(String[] args) {
     int n;
     int sum = 0;
@@ -21,13 +21,7 @@ public class SumX {
         }
     }
 
-    System.out.println("Ma trận A vừa nhập:");
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            System.out.print(A[i][j] + "\t");
-        }
-        System.out.println("\n");
-    }
+
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
