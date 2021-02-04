@@ -15,36 +15,36 @@ public class DelElement {
             size = scanner.nextInt();
         } while (size < 0);
         int[] arr = new int[size];
-        int[] arr2= new int[size-1];
-        for (int i=0;i<arr.length;i++){
-            System.out.print("phần tử"+i+":");
+        int[] arr2 = new int[size - 1];
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("element" + i + ":");
             arr[i] = scanner.nextInt();
         }
 
         System.out.print("Enter X:");
         int x = scanner.nextInt();
-        int k=0;
-        for (int i=0;i<arr.length;i++){
-            if (arr[i]==x){
-                k=i;
+        int k = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                k = i;
                 break;
             } else {
-                k=-1;
+                k = -1;
             }
         }
         System.out.println(k);
-        if (k!=-1){
-        for (int i = 0; i<arr.length;i++ ) {
-            if (i < k) {
-                arr2[i] = arr[i];
-            } else if (i == k) {
-                continue;
-            } else if (i > k) {
-                arr2[i-1] = arr[i];
+        if (k != -1) {
+            for (int i = 0; i < arr.length; i++) {
+                if (i < k) {
+                    arr2[i] = arr[i];
+                } else if (i == k) {
+                    continue;
+                } else {
+                    arr2[i - 1] = arr[i];
+                }
             }
-        }
         } else {
-            System.out.println("Không có "+x+" trong mảng");
+            System.out.println("Not available " + x + " in array");
         }
         System.out.println(Arrays.toString(arr2));
     }
