@@ -3,13 +3,13 @@ package _04_Class_Object.bai_tap;
 import java.util.Scanner;
 
 public class Fan {
-    final byte SLOW = 1;
-    final byte MEDIUM = 2;
-    final byte FAST = 3;
+    static final byte SLOW = 1;
+    static final byte MEDIUM = 2;
+    static final byte FAST = 3;
     int speed = SLOW;
     boolean on = false;
     double radius = 5.0;
-    String color = "Blue";
+    static String color = "Blue";
     Fan() {
     }
 
@@ -43,10 +43,8 @@ public class Fan {
     void setOn() {
         if (this.on == true) {
             this.on = false;
-            System.out.println("is on");
         } else {
             this.on = true;
-            System.out.println("is off");
         }
     }
     public String toString() {

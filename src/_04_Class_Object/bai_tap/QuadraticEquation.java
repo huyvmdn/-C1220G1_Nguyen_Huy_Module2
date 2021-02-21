@@ -30,7 +30,7 @@ public class QuadraticEquation {
         return (-this.b- Math.sqrt(Math.pow(this.b,2)-(4*this.a*this.c)))/2*this.a;
     }
 }
-class Chay{
+class Equation{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the a:");

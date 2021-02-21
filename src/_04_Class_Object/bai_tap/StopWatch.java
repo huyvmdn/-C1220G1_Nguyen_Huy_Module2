@@ -50,11 +50,11 @@ public class StopWatch {
 
         this.stop();
         long time = this.getElapsedTime();
-        System.out.println("thoi gian :" + time);
+        System.out.println("Time :" + time);
     }
 }
 
-class My {
+class Watch {
     public static void main(String[] args) {
         StopWatch Wa = new StopWatch();
         long t1;
