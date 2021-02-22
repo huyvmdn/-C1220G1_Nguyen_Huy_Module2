@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="00abf105-cac7-4b91-9859-f77811ee6a95" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_05_Modifier_Static/bai_tap/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_05_Modifier_Static/thuc_hanh/AccessModifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_05_Modifier_Static/thuc_hanh/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_05_Modifier_Static/thuc_hanh/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_05_Modifier_Static/thuc_hanh/TestStaticProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_07_inheritance/bai_tap/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_07_inheritance/bai_tap/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_07_inheritance/bai_tap/Point2D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_07_inheritance/thuc_hanh/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_08_abstract_interface/thuc_hanh/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_08_abstract_interface/thuc_hanh/CircleComparatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_08_abstract_interface/thuc_hanh/ComparableCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C1220G2_NguyenHuy_Module2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_04_Class_Object/bai_tap/Fan.java" beforeDir="false" afterPath="$PROJECT_DIR$/_04_Class_Object/bai_tap/Fan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_04_Class_Object/bai_tap/QuadraticEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/_04_Class_Object/bai_tap/QuadraticEquation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_04_Class_Object/bai_tap/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/_04_Class_Object/bai_tap/StopWatch.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1o0QjZ3Lp7gfrjjmkzRaPhHGnrv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RunManager" selected="Application.CircleComparatorTest">
+    <configuration name="AbstractAndInterfaceTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_08_abstract_interface.thuc_hanh.AbstractAndInterfaceTests" />
+      <module name="C1220G2_NguyenHuy_Module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_08_abstract_interface.thuc_hanh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CircleComparatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_08_abstract_interface.thuc_hanh.CircleComparatorTest" />
+      <module name="C1220G2_NguyenHuy_Module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_08_abstract_interface.thuc_hanh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComparableCircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_08_abstract_interface.thuc_hanh.ComparableCircleTest" />
+      <module name="C1220G2_NguyenHuy_Module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_08_abstract_interface.thuc_hanh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMovePoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_inheritance.bai_tap.TestMovePoint" />
+      <module name="C1220G2_NguyenHuy_Module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_07_inheritance.bai_tap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_07_inheritance.bai_tap.TestPoint" />
+      <module name="C1220G2_NguyenHuy_Module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_07_inheritance.bai_tap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CircleComparatorTest" />
+        <item itemvalue="Application.ComparableCircleTest" />
+        <item itemvalue="Application.AbstractAndInterfaceTests" />
+        <item itemvalue="Application.TestMovePoint" />
+        <item itemvalue="Application.TestPoint" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00abf105-cac7-4b91-9859-f77811ee6a95" name="Default Changelist" comment="" />
+      <created>1612421164270</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612421164270</updated>
+      <workItem from="1612421168545" duration="2347000" />
+      <workItem from="1612429008169" duration="117000" />
+      <workItem from="1612497387397" duration="6144000" />
+      <workItem from="1612867691572" duration="981000" />
+      <workItem from="1613439309929" duration="15079000" />
+      <workItem from="1613610452501" duration="2540000" />
+      <workItem from="1613911199012" duration="293000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="590" y="209" key="#Inspections" timestamp="1613439797590">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="590" y="209" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1613439797590" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1613611776242">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1613611776242" />
+    <state x="707" y="365" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1613439799702">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="707" y="365" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1613439799702" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1613612272103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613612272103" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1613612272103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613612272103" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1613612272103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613612272103" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1613612272103">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613612272103" />
+    <state x="803" y="277" key="refactoring.ChangeSignatureDialog" timestamp="1613611251165">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="803" y="277" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613611251165" />
+  </component>
+</project>
