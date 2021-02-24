@@ -2,59 +2,60 @@ package _09_CleanCode.bai_tap.bai_tap;
 
 public class TennisGame {
     public static String getScore(String player1Name, String player2Name, int scorePlayer1, int scorePlayer2) {
-        String message = "";
+        StringBuilder message = new StringBuilder();
         int tempScore;
         boolean checkScore =scorePlayer1 == scorePlayer2;
         boolean checkScore2=scorePlayer1 >= 4 || scorePlayer2 >= 4;
         if (checkScore) {
             switch (scorePlayer1) {
                 case 0:
-                    message = "Love-All";
+                    message = new StringBuilder("Love-All");
                     break;
                 case 1:
-                    message = "Fifteen-All";
+                    message = new StringBuilder("Fifteen-All");
                     break;
                 case 2:
-                    message = "Thirty-All";
+                    message = new StringBuilder("Thirty-All");
                     break;
                 case 3:
-                    message = "Forty-All";
+                    message = new StringBuilder("Forty-All");
                     break;
                 default:
-                    message = "Deuce";
+                    message = new StringBuilder("Deuce");
                     break;
 
             }
         } else if (checkScore2) {
             int minusResult = scorePlayer1 - scorePlayer2;
-            if (minusResult == 1) message = "Advantage player1";
-            else if (minusResult == -1) message = "Advantage player2";
-            else if (minusResult >= 2) message = "Win for player1";
-            else message = "Win for player2";
+            if (minusResult == 1) message = new StringBuilder("Advantage player1");
+            else if (minusResult == -1) message = new StringBuilder("Advantage player2");
+            else if (minusResult >= 2) message = new StringBuilder("Win for player1");
+            else message = new StringBuilder("Win for player2");
         } else {
-            for (int i = 1; i < 3; i++) {
+            int numberOfPlayers =2;
+            for (int i = 1; i <= numberOfPlayers; i++) {
                 if (i == 1) tempScore = scorePlayer1;
                 else {
-                    message += "-";
+                    message.append("-");
                     tempScore = scorePlayer2;
                 }
                 switch (tempScore) {
                     case 0:
-                        message += "Love";
+                        message.append("Love");
                         break;
                     case 1:
-                        message += "Fifteen";
+                        message.append("Fifteen");
                         break;
                     case 2:
-                        message += "Thirty";
+                        message.append("Thirty");
                         break;
                     case 3:
-                        message += "Forty";
+                        message.append("Forty");
                         break;
                 }
             }
         }
-        return message;
+        return message.toString();
     }
 }
 
