@@ -45,9 +45,10 @@ public class MyLinkedList<E> {
         Node temp = head;
         do {
             temp=temp.next;
-            if (temp==null) {
-                temp=new Node(data);
-                last = temp;
+            if (temp.next==null) {
+                Node newNode = new Node(data);
+                temp.next = newNode;
+                last = newNode;
                 numNodes++;
                 return last.data;
             }

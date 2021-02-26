@@ -19,6 +19,11 @@ public class MyLinkedListTest {
         linkedListl.printList();
         System.out.println("----------------");
 
+        linkedListl.addLast(54);
+        System.out.println("----------------");
+        linkedListl.printList();
+
+
         linkedListl.clear();
         System.out.println("----------------");
         linkedListl.printList();
