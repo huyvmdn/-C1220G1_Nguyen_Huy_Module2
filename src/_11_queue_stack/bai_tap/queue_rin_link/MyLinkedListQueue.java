@@ -37,7 +37,6 @@ public class MyLinkedListQueue {
         Node temp = this.rear.next;
        for (int i=0;i<size;i++) {
            System.out.println(temp.data);
-           temp.next;
 
        }
     }
