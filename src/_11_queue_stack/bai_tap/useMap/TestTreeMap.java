@@ -16,7 +16,7 @@ public class TestTreeMap {
         for (String e : textArray) {
             System.out.println(e);
         }
-        ArrayList<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<String>();
         Collections.addAll(list, textArray);
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).equals("")) {
