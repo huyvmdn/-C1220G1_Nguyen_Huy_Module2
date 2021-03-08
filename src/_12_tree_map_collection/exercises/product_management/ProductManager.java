@@ -130,7 +130,6 @@ public class ProductManager {
                     displayMenu();
                     break;
                 case "2":
-                    quanLySanPham.sort(Comparator.comparing(Product::getGia));
                     quanLySanPham.sort(Comparator.reverseOrder());
                     displayMenu();
                     break;
