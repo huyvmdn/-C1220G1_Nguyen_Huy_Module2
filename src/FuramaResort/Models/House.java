@@ -15,10 +15,17 @@ public class House extends Services {
 
     @Override
     public void showInfor() {
-        System.out.println(super.toString() + ','
-                + standardRoom + ','
-                + otherFacilities + ','
-                + noOfFloors );
+        System.out.println("House{" +
+                "serviceId='" + getServiceId() + '\'' +
+                ", serviceName='" + getServiceName() + '\'' +
+                ", usableArea=" + getUsableArea() +
+                ", rentalCost=" + getRentalCosts() +
+                ", maxNoOfPeople=" + getMaxNoOfNumber() +
+                ", rentalType='" + getRentalType() + '\'' +
+                ", roomStandard='" + standardRoom + '\'' +
+                ", otherFacilities='" + otherFacilities + '\'' +
+                ", noOfFloors=" + noOfFloors +
+                '}');
     }
 
 }

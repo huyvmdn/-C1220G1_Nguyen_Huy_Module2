@@ -43,7 +43,7 @@ public class QuanLyCanBo {
                     show();
                     break;
                 case "5":
-                    System.out.println("BYE ANH, chổ nào chưa tối ưu gốp ý giúp em. Thank a.");
+                    System.out.println("GOOD BYE.THANK YOU SO MUCH.");
                     System.exit(0);
                 default:
                     System.out.println("VUI LÒNG CHỌN MỘT CHỨC NĂNG TRONG DANH SÁCH");

@@ -20,7 +20,14 @@ public class Room extends Services {
 
     @Override
     public void showInfor() {
-        System.out.println(super.toString() + ','
-                + freeServicesIncluded);
+        System.out.println("House{" +
+                "serviceId='" + getServiceId() + '\'' +
+                ", serviceName='" + getServiceName() + '\'' +
+                ", usableArea=" + getUsableArea() +
+                ", rentalCost=" + getRentalCosts() +
+                ", maxNoOfPeople=" + getMaxNoOfNumber() +
+                ", rentalType='" + getRentalType() + '\'' +
+                ", freeServicesIncluded='" + freeServicesIncluded + '\'' +
+                '}');
     }
 }

@@ -64,16 +64,16 @@ public class Villa extends Services {
 
     @Override
     public void showInfor() {
-        System.out.println("service Id"+this.getServiceId()+ ','
-                + "Service Name"+ this.getServiceName() + ','
-                + "Usable Area"+ this.getUsableArea() + ','
-                + "Rental Costs"+ this.getRentalCosts() + ','
-                + "MaxNoOf Number"+ this.getMaxNoOfNumber() + ','
-                + "Rental Type"+ this.getRentalType() + ','
-                + "Standard Room"+ standardRoom + ','
-                + "Other Facilities"+otherFacilities + ','
-                + poolArea + ','
-                + noOfFloors );
+        System.out.println("Villa {serviceId='" + getServiceId() + '\'' +
+                ", serviceName='" + getServiceName() + '\'' +
+                ", usableArea=" + getUsableArea() +
+                ", rentalCost=" + getRentalCosts() +
+                ", maxNoOfPeople=" + getMaxNoOfNumber() +
+                ", rentalType='" + getRentalType() + '\'' +
+                ", roomStandard='" + standardRoom + '\'' +
+                ", otherFacilities='" + otherFacilities + '\'' +
+                ", poolArea=" + poolArea +
+                ", noOfFloors=" + noOfFloors + "}");
     }
     public static void main(String[] args) {
         Services service = new Villa("1", "Villa", 200, 1000, 5, "monthly", "Vip", "Pool", 200, 3);
