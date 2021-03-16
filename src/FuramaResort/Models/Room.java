@@ -8,18 +8,14 @@ public class Room extends Services {
         this.freeServicesIncluded = freeServicesIncluded;
     }
 
-    public Room(String freeServicesIncluded) {
-        this.freeServicesIncluded = freeServicesIncluded;
-    }
-
     @Override
     public String toString() {
-        return super.toString()+','+
-                freeServicesIncluded ;
+        return super.toString() + ',' +
+                freeServicesIncluded;
     }
 
     @Override
-    public void showInfor() {
+    public String showInfor() {
         System.out.println("House{" +
                 "serviceId='" + getServiceId() + '\'' +
                 ", serviceName='" + getServiceName() + '\'' +
@@ -29,5 +25,15 @@ public class Room extends Services {
                 ", rentalType='" + getRentalType() + '\'' +
                 ", freeServicesIncluded='" + freeServicesIncluded + '\'' +
                 '}');
+
+        return "House{" +
+                "serviceId='" + getServiceId() + '\'' +
+                ", serviceName='" + getServiceName() + '\'' +
+                ", usableArea=" + getUsableArea() +
+                ", rentalCost=" + getRentalCosts() +
+                ", maxNoOfPeople=" + getMaxNoOfNumber() +
+                ", rentalType='" + getRentalType() + '\'' +
+                ", freeServicesIncluded='" + freeServicesIncluded + '\'' +
+                '}';
     }
 }

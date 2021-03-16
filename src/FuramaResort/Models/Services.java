@@ -1,6 +1,8 @@
 package FuramaResort.Models;
 
-public abstract class Services {
+import java.util.Objects;
+
+public abstract class Services implements Comparable<Services> {
     private String serviceId;
     private String serviceName;
     private double usableArea;
@@ -75,8 +77,29 @@ public abstract class Services {
                 usableArea + ',' +
                 rentalCosts + ',' +
                 maxNoOfNumber + ',' +
-                rentalType ;
+                rentalType;
     }
 
-    public abstract void showInfor();
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Services) {
+            Services another = (Services) obj;
+            if (this.serviceName.equals(another.serviceName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return serviceName.hashCode();
+    }
+
+    @Override
+    public int compareTo(Services services) {
+        return this.getServiceName().compareTo(services.getServiceName());
+    }
+
+    public abstract String showInfor();
 }

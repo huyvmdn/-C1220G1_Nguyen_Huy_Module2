@@ -14,13 +14,6 @@ public class Villa extends Services {
         this.noOfFloors = noOfFloors;
     }
 
-    public Villa(String standardRoom, String otherFacilities, double poolArea, int noOfFloors) {
-        this.standardRoom = standardRoom;
-        this.otherFacilities = otherFacilities;
-        this.poolArea = poolArea;
-        this.noOfFloors = noOfFloors;
-    }
-
     public String getStandardRoom() {
         return standardRoom;
     }
@@ -59,11 +52,11 @@ public class Villa extends Services {
                 + standardRoom + ','
                 + otherFacilities + ','
                 + poolArea + ','
-                + noOfFloors ;
+                + noOfFloors;
     }
 
     @Override
-    public void showInfor() {
+    public String showInfor() {
         System.out.println("Villa {serviceId='" + getServiceId() + '\'' +
                 ", serviceName='" + getServiceName() + '\'' +
                 ", usableArea=" + getUsableArea() +
@@ -74,9 +67,25 @@ public class Villa extends Services {
                 ", otherFacilities='" + otherFacilities + '\'' +
                 ", poolArea=" + poolArea +
                 ", noOfFloors=" + noOfFloors + "}");
+
+        return "Villa {serviceId='" + getServiceId() + '\'' +
+                ", serviceName='" + getServiceName() + '\'' +
+                ", usableArea=" + getUsableArea() +
+                ", rentalCost=" + getRentalCosts() +
+                ", maxNoOfPeople=" + getMaxNoOfNumber() +
+                ", rentalType='" + getRentalType() + '\'' +
+                ", roomStandard='" + standardRoom + '\'' +
+                ", otherFacilities='" + otherFacilities + '\'' +
+                ", poolArea=" + poolArea +
+                ", noOfFloors=" + noOfFloors + "}";
     }
+
+
+
     public static void main(String[] args) {
         Services service = new Villa("1", "Villa", 200, 1000, 5, "monthly", "Vip", "Pool", 200, 3);
         service.showInfor();
     }
+
+
 }

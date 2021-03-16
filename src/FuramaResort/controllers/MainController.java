@@ -1,14 +1,21 @@
 package FuramaResort.controllers;
 
-import review_oop.oop_java_2.exercises1.CanBo;
-import review_oop.oop_java_2.exercises1.NhanVien;
+import FuramaResort.commons.*;
 
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
-public class MainController {
-    public Scanner scanner = new Scanner(System.in);
-    public void displayMainMenu() {
+public class MainController implements ReadAndWrite, Regex {
+    public static Scanner scanner = new Scanner(System.in);
+    static VillaController villaController = new VillaController();
+    static HouseController houseController = new HouseController();
+    static RoomController roomController = new RoomController();
+    static CustomerController customerController = new CustomerController();
+
+    public static void main(String[] args) {
+        displayMainMenu();
+    }
+
+    public static void displayMainMenu() {
         while (true) {
             System.out.print("\n--SELECT FUNCTION--\n"
                     + "1. Add New Services\n"
@@ -25,16 +32,16 @@ public class MainController {
                     addNewServices();
                     break;
                 case "2":
-//                    showServices()
+                    showServices();
                     break;
                 case "3":
-
+                    customerController.addNewCustomer();
                     break;
                 case "4":
-
+                    customerController.showInformationCustomers();
                     break;
                 case "5":
-
+                    addNewBook();
                     break;
                 case "6":
 
@@ -48,7 +55,7 @@ public class MainController {
         }
     }
 
-    public void addNewServices() {
+    public static void addNewServices() {
         while (true) {
             System.out.print("\n--SELECT FUNCTION--\n"
                     + "1. Add New Villa.\n"
@@ -60,13 +67,13 @@ public class MainController {
             String choice = scanner.nextLine();
             switch (choice) {
                 case "1":
-                    addNewVilla();
+                    villaController.addNewVilla(choice);
                     break;
                 case "2":
-
+                    houseController.addNewHouse(choice);
                     break;
                 case "3":
-
+                    roomController.addNewRoom(choice);
                     break;
                 case "4":
                     displayMainMenu();
@@ -80,41 +87,84 @@ public class MainController {
         }
     }
 
-    public void addNewVilla() {
-        String string = "";
-        String serviceId;
-        String serviceName;
-        double usableArea;
-        double rentalCost;
-        int maxNoOfPeople;
-        String rentalType;
-        String roomStandard;
-        String otherFacilities;
-        double poolArea;
-        int noOfFloors;
 
-        System.out.println("service Id");
-        serviceId = scanner.nextLine();
-        System.out.println("service Name");
-        serviceName = scanner.nextLine();
-        System.out.println(" usable Area");
-        usableArea = Double.parseDouble(scanner.nextLine());
-        System.out.println("rental Cost");
-        rentalCost = Double.parseDouble(scanner.nextLine());
-        System.out.println("max No Of People");
-        maxNoOfPeople = Integer.parseInt(scanner.nextLine());
-        System.out.println("rental Type");
-        rentalType = scanner.nextLine();
-        System.out.println("roomStandard");
-        roomStandard = scanner.nextLine();
-        System.out.println("otherFacilities");
-        otherFacilities = scanner.nextLine();
-        System.out.println("pool Area");
-        poolArea = Double.parseDouble(scanner.nextLine());
-        System.out.println("no Of Floors");
-        noOfFloors = Integer.parseInt(scanner.nextLine());
-        string = serviceId + ',' + serviceName + ',' + usableArea + ',' + rentalCost + ',' + maxNoOfPeople + ',' + rentalType + ',' + roomStandard + ',' + otherFacilities + ',' + poolArea + ',' + noOfFloors;
+    public static void showServices() {
+        while (true) {
+            System.out.println("--SELECT FUNCTION--");
+            System.out.println("1. Show all Villa.");
+            System.out.println("2. Show all House.");
+            System.out.println("3. Show all Room.");
+            System.out.println("4. Show All Name Villa Not Duplicate.");
+            System.out.println("5. Show All Name House Not Duplicate.");
+            System.out.println("6. Show All Name Room Not Duplicate.");
+            System.out.println("7. Back to menu");
+            System.out.println("8. Exit.");
+            System.out.println("SELECT FUNCTION: ");
+            String choice = scanner.nextLine();
+            switch (choice) {
+                case "1":
+                    villaController.showAllVilla();
+                    break;
+                case "2":
+                    houseController.showAllHouse();
+                    break;
+                case "3":
+                    roomController.showAllRoom();
+                    break;
+                case "4":
+                    villaController.showVillaUnduplicated();
+                    break;
+                case "5":
+                    houseController.showAllHouseUnduplicated();
+                    break;
+                case "6":
+                    roomController.showAllRoomUnduplicated();
+                    break;
+                case "7":
+                    displayMainMenu();
+                    break;
+                case "8":
+                    System.out.println("SEE YOU AGAIN");
+                    System.exit(0);
+                default:
+                    System.out.println("SELECT FUNCTION AGAIN");
+            }
+        }
+    }
 
+    public static void addNewBook() {
+        customerController.showInformationCustomers();
+        String choiceCustomer = scanner.nextLine();
+
+        while (true) {
+            System.out.println("--SELECT FUNCTION--");
+            System.out.println("1. Booking Villa\n");
+            System.out.println("2. Booking House");
+            System.out.println("3. Booking Room\n");
+            System.out.println("4. Back to menu");
+            System.out.println("5. Exit.");
+            System.out.println("SELECT FUNCTION: ");
+            String choice = scanner.nextLine();
+            switch (choice) {
+                case "1":
+                    villaController.showAllVilla();
+                    break;
+                case "2":
+                    houseController.showAllHouse();
+                    break;
+                case "3":
+                    roomController.showAllRoom();
+                    break;
+                case "4":
+                    displayMainMenu();
+                    break;
+                case "5":
+                    System.out.println("SEE YOU AGAIN");
+                    System.exit(0);
+                default:
+                    System.out.println("SELECT FUNCTION AGAIN");
+            }
+        }
     }
 }
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ProdustManager implements Serializable {
+public class ProdustManager {
     static Scanner scanner = new Scanner(System.in);
     static final String PATH = "C:\\Users\\Administrator\\Desktop\\Module 1\\C1220G1_Nguyen_Huy\\module_2\\C1220G2_NguyenHuy_Module2\\src\\_17_IO_binary_file\\exercises\\produst_manager\\luuThongTin.txt";
 
@@ -65,32 +65,9 @@ public class ProdustManager implements Serializable {
     }
 
     static public void write(Product product) throws IOException, ClassNotFoundException {
-//        FileOutputStream fos = null;
-//        ObjectOutputStream oos = null;
+
         FileInputStream fis = null;
         ObjectInputStream ois = null;
-//        try {
-
-
-//
-//            fis.close();
-//            ois.close();
-////            Bước 1: Tạo đối tượng luồng và liên kết nguồn dữ liệu
-//            fos = new FileOutputStream(PATH);
-//            oos = new ObjectOutputStream(fos);
-//            //Khai báo mảng
-//            sArr.add(product);
-//
-//            //Bước 2: Ghi mảng đối tượng vào file
-//            oos.writeObject(sArr);
-//
-//        } catch (IOException ex) {
-//            System.out.println("Loi ghi file: " + ex);
-//        } finally {
-//            fos.close();
-//            oos.close();
-//
-//        }
         try {
             fis = new FileInputStream(PATH);
             ois = new ObjectInputStream(fis);
