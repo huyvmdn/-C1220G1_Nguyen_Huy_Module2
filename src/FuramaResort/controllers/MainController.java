@@ -5,7 +5,7 @@ import FuramaResort.commons.*;
 
 import java.util.*;
 
-public class MainController implements ReadAndWrite, Regex {
+public  class MainController implements ReadAndWrite, Regex {
     public static Scanner scanner = new Scanner(System.in);
     static VillaController villaController = new VillaController();
     static HouseController houseController = new HouseController();

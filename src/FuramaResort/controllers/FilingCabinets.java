@@ -35,7 +35,7 @@ public class FilingCabinets implements ReadAndWrite {
             check=true;
             }
         }
-        if (check=false) {
+        if (check==false) {
             System.err.println("No staff found");
         }
     }

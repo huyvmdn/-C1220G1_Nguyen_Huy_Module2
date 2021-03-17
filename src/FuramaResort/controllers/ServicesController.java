@@ -1,6 +1,7 @@
 package FuramaResort.controllers;
 
 import FuramaResort.commons.Regex;
+import FuramaResort.commons.Validation;
 
 import java.util.Scanner;
 
@@ -19,20 +20,20 @@ public class ServicesController<E> implements Regex {
     public String addSeviceID(String choice) {
         do {
             if (choice.equals("1")) {
-
+                
                 System.out.println("service Id(Villa) (SVVL-1234)");
                 serviceId = scanner.nextLine();
-                check = serviceId.matches(SERVICE_VILLA);
-                if (!check) {
-                    System.err.println("Wrong Input");
-                }
+                check = Validation.checkIdVilla(serviceId);
+
             } else if (choice.equals("2")) {
+
                 System.out.println("service Id(House) (SVHO-1234)");
                 serviceId = scanner.nextLine();
                 check = serviceId.matches(SERVICE_HOUSE);
                 if (!check) {
                     System.err.println("Wrong Input");
                 }
+
             } else if (choice.equals("3")) {
                 System.out.println("service Id(Room) (SVRO-1234)");
                 serviceId = scanner.nextLine();
@@ -76,6 +77,7 @@ public class ServicesController<E> implements Regex {
         } while (!check);
         return usableArea;
     }
+
     public Double addRentalCost() {
         check = false;
         do {
@@ -115,15 +117,15 @@ public class ServicesController<E> implements Regex {
     }
 
     public String addRentalType() {
-    check =false;
-            do {
-        System.out.println("rental Type (Abc...)");
-        rentalType = scanner.nextLine();
-        check = rentalType.matches(SERVICE_NAME);
-        if (!check) {
-            System.err.println("Wrong input");
-        }
-    } while(!check);
-return rentalType;
-}
+        check = false;
+        do {
+            System.out.println("rental Type (Abc...)");
+            rentalType = scanner.nextLine();
+            check = rentalType.matches(SERVICE_NAME);
+            if (!check) {
+                System.err.println("Wrong input");
+            }
+        } while (!check);
+        return rentalType;
     }
+}
