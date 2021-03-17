@@ -68,7 +68,7 @@ public class HouseController extends ServicesController implements Regex, ReadAn
         List<String[]> list = ReadAndWrite.readFile("House.csv");
         int count = 1;
         for (int i = 0; i < list.size(); i++) {
-            Services house = new House(list.get(i)[0], list.get(i)[1], Double.parseDouble(list.get(i)[2]), Double.parseDouble(list.get(i)[3]), Integer.parseInt(list.get(i)[4]), list.get(i)[5], list.get(i)[6], list.get(i)[7], Integer.parseInt(list.get(i)[8]));
+            Services house = new House(list.get(i));
             System.out.print(count + ". ");
             house.showInfor();
             count++;
@@ -80,7 +80,7 @@ public class HouseController extends ServicesController implements Regex, ReadAn
         int count = 1;
         Set<Services> servicesSet = new TreeSet<>();
         for (int i = 0; i < list.size(); i++) {
-            Services house = new House(list.get(i)[0], list.get(i)[1], Double.parseDouble(list.get(i)[2]), Double.parseDouble(list.get(i)[3]), Integer.parseInt(list.get(i)[4]), list.get(i)[5], list.get(i)[6], list.get(i)[7], Integer.parseInt(list.get(i)[8]));
+            Services house = new House(list.get(i));
             servicesSet.add(house);
         }
 

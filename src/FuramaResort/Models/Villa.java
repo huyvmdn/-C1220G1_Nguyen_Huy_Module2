@@ -14,6 +14,14 @@ public class Villa extends Services {
         this.noOfFloors = noOfFloors;
     }
 
+    public Villa(String[] arrString) {
+        super(arrString);
+        this.standardRoom = arrString[6];
+        this.otherFacilities = arrString[7];
+        this.poolArea = Double.parseDouble(arrString[8]);
+        this.noOfFloors = Integer.parseInt(arrString[9]);
+    }
+
     public String getStandardRoom() {
         return standardRoom;
     }

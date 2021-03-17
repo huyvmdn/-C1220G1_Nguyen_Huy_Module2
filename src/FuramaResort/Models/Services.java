@@ -19,7 +19,13 @@ public abstract class Services implements Comparable<Services> {
         this.rentalType = rentalType;
     }
 
-    public Services() {
+    public Services(String[] arrString) {
+        this.serviceId = arrString[0];
+        this.serviceName = arrString[1];
+        this.usableArea = Double.parseDouble(arrString[2]);
+        this.rentalCosts = Double.parseDouble(arrString[3]);
+        this.maxNoOfNumber = Integer.parseInt(arrString[4]);
+        this.rentalType = arrString[5];
     }
 
     public String getServiceId() {

@@ -85,7 +85,7 @@ public class VillaController extends ServicesController implements Regex, ReadAn
         List<String[]> list = ReadAndWrite.readFile("Villa.csv");
         int count = 1;
         for (int i = 0; i < list.size(); i++) {
-            Services villa = new Villa(list.get(i)[0], list.get(i)[1], Double.parseDouble(list.get(i)[2]), Double.parseDouble(list.get(i)[3]), Integer.parseInt(list.get(i)[4]), list.get(i)[5], list.get(i)[6], list.get(i)[7], Double.parseDouble(list.get(i)[8]), Integer.parseInt(list.get(i)[9]));
+            Services villa = new Villa(list.get(i));
             System.out.print(count + ". ");
             villa.showInfor();
             count++;
@@ -97,7 +97,7 @@ public class VillaController extends ServicesController implements Regex, ReadAn
         Set<Services> servicesSet = new TreeSet<>();
         int count = 1;
         for (int i = 0; i < list.size(); i++) {
-            Services villa = new Villa(list.get(i)[0], list.get(i)[1], Double.parseDouble(list.get(i)[2]), Double.parseDouble(list.get(i)[3]), Integer.parseInt(list.get(i)[4]), list.get(i)[5], list.get(i)[6], list.get(i)[7], Double.parseDouble(list.get(i)[8]), Integer.parseInt(list.get(i)[9]));
+            Services villa = new Villa(list.get(i));
             servicesSet.add(villa);
         }
         for (Services s : servicesSet) {

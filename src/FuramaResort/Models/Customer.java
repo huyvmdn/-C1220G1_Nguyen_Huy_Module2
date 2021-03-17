@@ -34,7 +34,15 @@ public class Customer {
         this.adress = adress;
     }
 
-    public Customer() {
+    public Customer(String[] arrString) {
+        this.name = arrString[0];
+        this.birthday = arrString[1];
+        this.gender = arrString[2];
+        this.identityCard = Integer.parseInt(arrString[3]);
+        this.phoneNumber = Integer.parseInt(arrString[4]);
+        this.email = arrString[5];
+        this.TypeOfGuests = arrString[6];
+        this.adress = arrString[7];
     }
 
     public String getName() {
@@ -108,6 +116,20 @@ public class Customer {
     public void setUsingService(Services usingService) {
         this.usingService = usingService;
     }
+
+    public void setUsingServiceAddVilla(String[] arrString) {
+        this.usingService=new Villa(arrString);
+    }
+
+    public void setUsingServiceAddHouse(String[] arrString) {
+        this.usingService=new House(arrString);
+    }
+
+    public void setUsingServiceAddRoom(String[] arrString) {
+        this.usingService=new Room(arrString);
+    }
+
+
     public int getYearCustomer() {
         String[] arrayString =this.birthday.split("/");
         return Integer.parseInt(arrayString[2]);
@@ -126,6 +148,18 @@ public class Customer {
                 usingService ;
     }
 
+    public String stringPlusUsingService() {
+        return name + ',' +
+                birthday + ',' +
+                gender + ',' +
+                identityCard + ',' +
+                phoneNumber + ',' +
+                email + ',' +
+                TypeOfGuests + ',' +
+                adress + ',' +
+                usingService.showInfor();
+    }
+
     public void showInfo() {
         System.out.println("Customer{" +
                 "name='" + name + '\'' +
@@ -136,7 +170,6 @@ public class Customer {
                 ", email='" + email + '\'' +
                 ", TypeOfGuests='" + TypeOfGuests + '\'' +
                 ", andress='" + adress + '\'' +
-//                ", usingService=" + usingService.showInfor() +
                 '}');
     }
 }

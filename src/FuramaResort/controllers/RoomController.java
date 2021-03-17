@@ -42,7 +42,7 @@ public class RoomController extends ServicesController implements Regex, ReadAnd
         List<String[]> list = ReadAndWrite.readFile("Room.csv");
         int count = 1;
         for (int i = 0; i < list.size(); i++) {
-            Services room = new Room(list.get(i)[0], list.get(i)[1], Double.parseDouble(list.get(i)[2]), Double.parseDouble(list.get(i)[3]), Integer.parseInt(list.get(i)[4]), list.get(i)[5], list.get(i)[6]);
+            Services room = new Room(list.get(i));
             System.out.print(count + ". ");
             room.showInfor();
             count++;
@@ -54,7 +54,7 @@ public class RoomController extends ServicesController implements Regex, ReadAnd
         int count = 1;
         Set<Services> servicesSet = new TreeSet<>();
         for (int i = 0; i < list.size(); i++) {
-            Services room = new Room(list.get(i)[0], list.get(i)[1], Double.parseDouble(list.get(i)[2]), Double.parseDouble(list.get(i)[3]), Integer.parseInt(list.get(i)[4]), list.get(i)[5], list.get(i)[6]);
+            Services room = new Room(list.get(i));
             servicesSet.add(room);
         }
         for (Services s : servicesSet) {

@@ -1,6 +1,11 @@
 package FuramaResort.commons;
 
+import FuramaResort.Models.Customer;
+
+import java.util.List;
+
 public class CustomerException extends Exception implements Regex {
+
     public CustomerException(String message) {
         super(message);
     }
@@ -53,6 +58,14 @@ public class CustomerException extends Exception implements Regex {
         check = email.matches(EMAIL_REGEX);
         if (!check) {
             throw new CustomerException("Email must be in the correct format abc@abc.abc");
+        }
+    }
+    public static boolean checkChoiceCustomer(String choiceCustomer, List<Customer> list) throws CustomerException {
+        int choice= Integer.parseInt(choiceCustomer);
+        if (list.size() <= choice &&choice<=0){
+            throw new CustomerException("Wrong index");
+        }else {
+            return true;
         }
     }
 }

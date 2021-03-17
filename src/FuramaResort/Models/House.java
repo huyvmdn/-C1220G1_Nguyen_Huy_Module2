@@ -12,6 +12,13 @@ public class House extends Services {
         this.noOfFloors = noOfFloors;
     }
 
+    public House(String[] arrString) {
+        super(arrString);
+        this.standardRoom = arrString[6];
+        this.otherFacilities = arrString[7];
+        this.noOfFloors = Integer.parseInt(arrString[8]);
+    }
+
     @Override
     public String toString() {
         return super.toString() + ','

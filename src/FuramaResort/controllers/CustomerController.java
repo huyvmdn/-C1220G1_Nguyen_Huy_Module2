@@ -123,12 +123,24 @@ public class CustomerController implements Regex, ReadAndWrite {
             }
         } while (true);
     }
+    public void showCustomers() {
+        List<String[]> list = ReadAndWrite.readFile("Customer.csv");
+        List<Customer> listCustomer = new ArrayList<>();
+        int count=1;
+        for (int i = 0; i < list.size(); i++) {
+            Customer customer = new Customer(list.get(i));
+            System.out.print(count + ". ");
+            customer.showInfo();
+            count++;
+        }
+    }
+
 
     public void showInformationCustomers() {
         List<String[]> list = ReadAndWrite.readFile("Customer.csv");
         List<Customer> listCustomer = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
-            Customer customer = new Customer(list.get(i)[0], list.get(i)[1], list.get(i)[2], Integer.parseInt(list.get(i)[3]), Integer.parseInt(list.get(i)[4]), list.get(i)[5], list.get(i)[6], list.get(i)[7]);
+            Customer customer = new Customer(list.get(i));
             listCustomer.add(customer);
         }
         listCustomer.sort(Comparator.comparing(Customer::getName).thenComparing(Customer::getYearCustomer));

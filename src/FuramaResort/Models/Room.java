@@ -8,6 +8,11 @@ public class Room extends Services {
         this.freeServicesIncluded = freeServicesIncluded;
     }
 
+    public Room(String[] arrString) {
+        super(arrString);
+        this.freeServicesIncluded = arrString[6];
+    }
+
     @Override
     public String toString() {
         return super.toString() + ',' +
