@@ -43,7 +43,6 @@ public class BookingController implements Regex, ReadAndWrite {
     public static Customer choiceCustomer() {
         List<String[]> list = ReadAndWrite.readFile("Customer.csv");
         List<Customer> listCustomer = new ArrayList<>();
-        List<String> newList = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
             Customer customer = new Customer(list.get(i));
             listCustomer.add(customer);

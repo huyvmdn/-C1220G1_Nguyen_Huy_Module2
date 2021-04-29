@@ -20,7 +20,7 @@ public class ServicesController<E> implements Regex {
     public String addSeviceID(String choice) {
         do {
             if (choice.equals("1")) {
-                
+
                 System.out.println("service Id(Villa) (SVVL-1234)");
                 serviceId = scanner.nextLine();
                 check = Validation.checkIdVilla(serviceId);
@@ -29,18 +29,12 @@ public class ServicesController<E> implements Regex {
 
                 System.out.println("service Id(House) (SVHO-1234)");
                 serviceId = scanner.nextLine();
-                check = serviceId.matches(SERVICE_HOUSE);
-                if (!check) {
-                    System.err.println("Wrong Input");
-                }
+                check = Validation.checkIdHouse(serviceId);
 
             } else if (choice.equals("3")) {
                 System.out.println("service Id(Room) (SVRO-1234)");
                 serviceId = scanner.nextLine();
-                check = serviceId.matches(SERVICE_ROOM);
-                if (!check) {
-                    System.err.println("Wrong Input");
-                }
+               check=Validation.checkIdRoom(serviceId);
             }
         } while (!check);
         return serviceId;
@@ -51,31 +45,21 @@ public class ServicesController<E> implements Regex {
         do {
             System.out.println("service Name ( Abc...)");
             serviceName = scanner.nextLine();
-            check = serviceName.matches(SERVICE_NAME);
-            if (!check) {
-                System.err.println("Wrong Input");
-            }
+            check=Validation.checkServiceName(serviceName);
         } while (!check);
         return serviceName;
     }
 
     public Double addUsableArea() {
         check = false;
+        String checkUsableArea;
         do {
-            try {
-                System.out.println(" usable Area (Number >=30m2): ");
-                usableArea = Double.parseDouble(scanner.nextLine());
-                if (usableArea >= 30) {
-                    check = true;
-                    break;
-                } else {
-                    System.err.println(" Wrong Input");
-                }
-            } catch (Exception e) {
-                System.err.println(" Wrong Input");
-            }
+            System.out.println(" usable Area (Number >=30m2): ");
+            checkUsableArea=scanner.nextLine();
+            check=Validation.checkUsableArea(checkUsableArea);
         } while (!check);
-        return usableArea;
+
+        return usableArea= Double.parseDouble(checkUsableArea);
     }
 
     public Double addRentalCost() {
@@ -121,10 +105,7 @@ public class ServicesController<E> implements Regex {
         do {
             System.out.println("rental Type (Abc...)");
             rentalType = scanner.nextLine();
-            check = rentalType.matches(SERVICE_NAME);
-            if (!check) {
-                System.err.println("Wrong input");
-            }
+            check=Validation.checkRentalType(rentalType);
         } while (!check);
         return rentalType;
     }

@@ -49,11 +49,13 @@ public class VillaController extends ServicesController implements Regex, ReadAn
         check = false;
         do {
             try {
-                System.out.println("pool Area (Number >= 30m2");
+                System.out.println("pool Area (Number >= 30m2)");
                 poolArea = Double.parseDouble(scanner.nextLine());
                 if (poolArea >= 30) {
                     check = true;
                     break;
+                }else {
+                    System.err.println(" Wrong Input");
                 }
             } catch (Exception e) {
                 System.err.println(" Wrong Input");
@@ -68,6 +70,8 @@ public class VillaController extends ServicesController implements Regex, ReadAn
                 if (noOfFloors > 0) {
                     check = true;
                     break;
+                }else {
+                    System.err.println(" Wrong Input");
                 }
             } catch (Exception e) {
                 System.err.println(" Wrong Input");

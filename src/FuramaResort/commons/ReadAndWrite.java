@@ -43,6 +43,8 @@ public interface ReadAndWrite<T> {
             String[] temp;
             while ((line = bufferedReader.readLine()) != null) {
                 temp = line.split(",");
+
+
                 list.add(temp);
             }
         } catch (IOException e) {

@@ -1,6 +1,8 @@
 package FuramaResort.commons;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public interface Regex {
     public static final String SERVICE_VILLA = "^SVVL-[0-9]{4}$";

@@ -51,6 +51,8 @@ public class HouseController extends ServicesController implements Regex, ReadAn
                 if (noOfFloors > 0) {
                     check = true;
                     break;
+                }else {
+                    System.err.println(" Wrong Input");
                 }
             } catch (Exception e) {
                 System.err.println(" Wrong Input");

@@ -21,6 +21,7 @@ public class CustomerException extends Exception implements Regex {
             throw new CustomerException("Name invalid");
         }
     }
+
     public static void  checkBirthday(String birthday) throws CustomerException{
         check= birthday.matches(BIRTHDAY);
         if (!check) {
@@ -48,18 +49,22 @@ public class CustomerException extends Exception implements Regex {
             throw new CustomerException("The Id Card must have 9 digits and be in the format XXXXXXXXX");
         }
     }
+
+
     public static void checkPhoneNumber(String phoneNumber) throws CustomerException {
         check = phoneNumber.matches(PHONE_NUMBER);
         if (!check) {
             throw new CustomerException("The phone number must have 10 digits and be in the format 0XXXXXXXXX");
         }
     }
+    // kiem tra email
     public static void checkEmail(String email) throws CustomerException {
         check = email.matches(EMAIL_REGEX);
         if (!check) {
             throw new CustomerException("Email must be in the correct format abc@abc.abc");
         }
     }
+    //kiem tra lon hon khong va khong qua so luong
     public static boolean checkChoiceCustomer(String choiceCustomer, List<Customer> list) throws CustomerException {
         int choice= Integer.parseInt(choiceCustomer);
         if (list.size() <= choice &&choice<=0){
